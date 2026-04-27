@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="hero" id="hero">
       <div className="hero-content">
-        <div className="hero-badge reveal">L'EXCELLENCE TECHNOLOGIQUE • 2024</div>
+        <div className="hero-badge reveal">L'EXCELLENCE TECHNOLOGIQUE</div>
         <h1 className="reveal">Propulsez votre <span className="gradient-text">Vision</span> vers le Futur</h1>
         <p className="reveal">Experts en ingénierie logicielle et solutions technologiques avancées. Nous transformons vos idées complexes en réalités digitales performantes.</p>
         <div className="hero-btns reveal">
