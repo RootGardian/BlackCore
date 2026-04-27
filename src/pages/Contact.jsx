@@ -51,8 +51,7 @@ const Contact = () => {
             <form action="https://formsubmit.co/ahmedbangoura852@gmail.com" method="POST" className="main-contact-form">
               {/* Honeypot */}
               <input type="text" name="_honey" style={{ display: 'none' }} />
-              {/* Disable Captcha */}
-              <input type="hidden" name="_captcha" value="false" />
+              {/* Enable Captcha (Default for FormSubmit) */}
 
               <div className="form-row">
                 <div className="form-group">
