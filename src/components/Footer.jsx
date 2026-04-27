@@ -15,6 +15,9 @@ const Footer = () => {
         </div>
       </div>
       <p>BlackCore Tech © {new Date().getFullYear()} Tous droits réservés</p>
+      <p style={{ marginTop: '10px', opacity: 0.6, fontSize: '0.75rem' }}>
+        Powered by <a href="https://blackcore-l8nt.onrender.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: '700' }}>BlackCore Tech</a>
+      </p>
     </footer>
   );
 };
