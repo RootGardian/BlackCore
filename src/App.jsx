@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import { useEffect } from 'react';
 
 function App() {
@@ -10,10 +11,12 @@ function App() {
     // Re-implement the scroll reveal and header scroll logic
     const handleScroll = () => {
       const header = document.getElementById('header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
+      if (header) {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
       }
     };
 
@@ -23,6 +26,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

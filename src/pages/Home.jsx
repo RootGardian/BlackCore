@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Partners from '../components/Partners';
@@ -53,7 +54,7 @@ const Home = () => {
       <section className="cta-section">
         <div className="cta-content">
           <h2>Un nouveau projet ?</h2>
-          <a href="/contact" className="btn-pill">Nous en parler <i className="fas fa-chevron-right"></i></a>
+          <Link to="/contact" className="btn-pill">Nous en parler <i className="fas fa-chevron-right"></i></Link>
           <div className="social-links">
             <a href="#"><i className="fab fa-facebook-f"></i></a>
             <a href="#"><i className="fab fa-linkedin-in"></i></a>

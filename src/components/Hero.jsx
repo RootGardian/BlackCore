@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
   return (
     <section className="hero" id="hero">
@@ -7,7 +9,7 @@ const Hero = () => {
         <p>Experts en ingénierie logicielle et solutions technologiques avancées. Nous transformons vos idées complexes en réalités digitales performantes.</p>
         <div className="hero-btns">
           <a href="#services" className="btn btn-primary">DÉCOUVRIR NOS SERVICES</a>
-          <a href="/contact" className="btn btn-outline"><i className="fas fa-comment-alt"></i> NOUS CONTACTER</a>
+          <Link to="/contact" className="btn btn-outline"><i className="fas fa-comment-alt"></i> NOUS CONTACTER</Link>
         </div>
       </div>
     </section>
