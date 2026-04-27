@@ -620,16 +620,16 @@ header.scrolled {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
+        width: 100%;
         height: 100vh;
-        background: rgba(10, 10, 10, 0.98);
+        background: rgba(10, 10, 10, 1);
         backdrop-filter: blur(20px);
         display: flex;
         align-items: center;
         justify-content: center;
         transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1000;
-        border-left: 1px solid rgba(255, 102, 0, 0.1);
+        border-left: 1px solid rgba(255, 102, 0, 0.2);
     }
 
     nav.open {
@@ -639,13 +639,30 @@ header.scrolled {
     .nav-links {
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 40px;
         display: flex;
+        width: 100%;
     }
 
     .nav-links a {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
     }
+
+    nav.open .nav-links a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    nav.open .nav-links li:nth-child(1) a { transition-delay: 0.1s; }
+    nav.open .nav-links li:nth-child(2) a { transition-delay: 0.2s; }
+    nav.open .nav-links li:nth-child(3) a { transition-delay: 0.3s; }
+    nav.open .nav-links li:nth-child(4) a { transition-delay: 0.4s; }
+    nav.open .nav-links li:nth-child(5) a { transition-delay: 0.5s; }
 
     .hero {
         padding-top: 80px;
@@ -759,7 +776,6 @@ header.scrolled {
 }
 
 /* Ensure content stays above overlay */
-.contact-page-body header,
 .contact-page-body section,
 .contact-page-body footer {
     position: relative;
