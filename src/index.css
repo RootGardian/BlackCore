@@ -216,9 +216,9 @@ header.scrolled {
     }
 
     .dropdown-trigger {
-        font-size: 1.5rem;
-        font-weight: 700;
-        letter-spacing: 3px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
         text-transform: uppercase;
     }
 }
@@ -832,18 +832,31 @@ header.scrolled {
         right: 0;
     }
 
+    .nav-links li.mobile-only {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .nav-links .btn {
+        padding: 12px 24px;
+        font-size: 0.8rem;
+    }
+
     .nav-links {
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 25px;
         display: flex;
         width: 100%;
+        padding: 40px 0;
     }
 
     .nav-links a {
-        font-size: 1.5rem;
-        font-weight: 700;
-        letter-spacing: 3px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
         opacity: 0;
         transform: translateY(20px);
         transition: all 0.4s ease;
