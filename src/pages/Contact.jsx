@@ -37,40 +37,44 @@ const Contact = () => {
                 <i className="fas fa-map-marker-alt"></i>
                 <span>Dakar, Sénégal</span>
               </div>
-              <div className="social-links" style={{ justifyContent: 'flex-start', marginTop: '30px' }}>
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-linkedin-in"></i></a>
+              <div className="info-item">
+                <i className="fas fa-map-marker-alt"></i>
+                <span>Casablanca, Maroc</span>
               </div>
+              <div className="info-item">
+                <i className="fas fa-map-marker-alt"></i>
+                <span>Conakry, Guinée</span>
+              </div>
+
+
+              <form action="https://formsubmit.co/ahmedbangoura852@gmail.com" method="POST" className="main-contact-form">
+                {/* Honeypot */}
+                <input type="text" name="_honey" style={{ display: 'none' }} />
+                {/* Disable Captcha */}
+                <input type="hidden" name="_captcha" value="false" />
+
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>Nom complet</label>
+                    <input type="text" name="name" placeholder="Ex: Jean Dupont" required />
+                  </div>
+                  <div className="form-group">
+                    <label>Adresse Email</label>
+                    <input type="email" name="email" placeholder="Ex: jean@email.com" required />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label>Sujet</label>
+                  <input type="text" name="subject" placeholder="De quoi souhaitez-vous discuter ?" required />
+                </div>
+                <div className="form-group">
+                  <label>Message</label>
+                  <textarea name="message" rows="6" placeholder="Décrivez votre projet en quelques mots..." required></textarea>
+                </div>
+                <button type="submit" className="btn-pill" style={{ width: '100%', marginTop: '10px' }}>Envoyer la demande <i className="fas fa-paper-plane"></i></button>
+              </form>
             </div>
-
-            <form action="https://formsubmit.co/ahmedbangoura852@gmail.com" method="POST" className="main-contact-form">
-              {/* Honeypot */}
-              <input type="text" name="_honey" style={{ display: 'none' }} />
-              {/* Disable Captcha */}
-              <input type="hidden" name="_captcha" value="false" />
-
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Nom complet</label>
-                  <input type="text" name="name" placeholder="Ex: Jean Dupont" required />
-                </div>
-                <div className="form-group">
-                  <label>Adresse Email</label>
-                  <input type="email" name="email" placeholder="Ex: jean@email.com" required />
-                </div>
-              </div>
-              <div className="form-group">
-                <label>Sujet</label>
-                <input type="text" name="subject" placeholder="De quoi souhaitez-vous discuter ?" required />
-              </div>
-              <div className="form-group">
-                <label>Message</label>
-                <textarea name="message" rows="6" placeholder="Décrivez votre projet en quelques mots..." required></textarea>
-              </div>
-              <button type="submit" className="btn-pill" style={{ width: '100%', marginTop: '10px' }}>Envoyer la demande <i className="fas fa-paper-plane"></i></button>
-            </form>
           </div>
-        </div>
       </section>
     </main>
   );
