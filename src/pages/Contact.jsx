@@ -15,9 +15,8 @@ const Contact = () => {
       <section className="contact-hero">
         <div className="container">
           <div className="section-title reveal active">
-            <div className="hero-badge" style={{ marginBottom: '20px' }}>CONTACT</div>
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '3.5rem', color: 'white' }}>Parlons de votre projet</h1>
-            <p style={{ maxWidth: '700px', margin: '20px auto' }}>Vous avez une idée ambitieuse ou un défi technique ? Notre équipe est prête à vous accompagner dans votre transformation digitale.</p>
+            <h1 className="gradient-text" style={{ fontFamily: 'var(--font-serif)', fontSize: '4rem', marginBottom: '20px' }}>Parlons de votre projet</h1>
+            <p style={{ maxWidth: '700px', margin: '0 auto', opacity: 0.8, fontSize: '1.1rem' }}>Vous avez une idée ambitieuse ou un défi technique ? Notre équipe est prête à vous accompagner dans votre transformation digitale.</p>
           </div>
         </div>
       </section>

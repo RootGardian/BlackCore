@@ -5,23 +5,9 @@ import Partners from '../components/Partners';
 import { useEffect } from 'react';
 
 const Home = () => {
+  // Reveal logic is now handled globally in App.jsx
   useEffect(() => {
-    // Scroll reveal logic
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-    
-    return () => {
-      revealElements.forEach(el => revealObserver.unobserve(el));
-    };
+    window.scrollTo(0, 0);
   }, []);
 
   return (

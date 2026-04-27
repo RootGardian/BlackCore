@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -13,8 +13,19 @@ import ScrollToTop from './components/ScrollToTop';
 import { useEffect } from 'react';
 
 function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <AppContent />
+    </Router>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+
   useEffect(() => {
-    // Re-implement the scroll reveal and header scroll logic
+    // Header scroll logic
     const handleScroll = () => {
       const header = document.getElementById('header');
       if (header) {
@@ -28,6 +39,30 @@ function App() {
 
     window.addEventListener('scroll', handleScroll);
 
+    // Hash Scroll Logic (for #services, etc.)
+    if (location.hash) {
+      setTimeout(() => {
+        const id = location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300); // Wait for page to load/render
+    }
+
+    // Global Scroll Reveal logic
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
     // Right-click protection (deterrent)
     const handleContextMenu = (e) => e.preventDefault();
     document.addEventListener('contextmenu', handleContextMenu);
@@ -35,12 +70,12 @@ function App() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('contextmenu', handleContextMenu);
+      revealElements.forEach(el => revealObserver.unobserve(el));
     };
-  }, []);
+  }, [location]); // Re-run on route change to catch new reveal elements
 
   return (
-    <Router>
-      <ScrollToTop />
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -53,7 +88,7 @@ function App() {
         <Route path="/services/cyber-securite" element={<CyberSecurity />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
 

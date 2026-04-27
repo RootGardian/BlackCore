@@ -11,30 +11,33 @@ const Development = () => {
       <section className="contact-hero">
         <div className="container">
           <div className="section-title reveal active">
-            <div className="hero-badge">DÉVELOPPEMENT</div>
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '3.5rem', color: 'white' }}>Solutions Digitales Sur Mesure</h1>
-            <p style={{ maxWidth: '800px', margin: '20px auto' }}>Nous concevons et développons des applications performantes, scalables et centrées sur l'utilisateur.</p>
+            <h1 className="gradient-text" style={{ fontFamily: 'var(--font-serif)', fontSize: '4rem', marginBottom: '20px' }}>Solutions Digitales Sur Mesure</h1>
+            <p style={{ maxWidth: '800px', margin: '0 auto', opacity: 0.8, fontSize: '1.1rem' }}>Nous concevons et développons des applications performantes, scalables et centrées sur l'utilisateur.</p>
           </div>
         </div>
       </section>
 
       <section className="service-body">
         <div className="container">
-          <div className="contact-container reveal active service-grid">
-            <div>
+          <div className="service-grid reveal active">
+            <div className="service-main-content">
               <h3>Notre Expertise</h3>
               <p>De l'idée à la mise en production, nous vous accompagnons dans la création de vos outils digitaux les plus complexes.</p>
-              <ul className="nav-links" style={{ alignItems: 'flex-start', marginTop: '20px', gap: '15px' }}>
-                <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> Applications Web Modernes (React, Next.js)</li>
-                <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> Solutions Mobile Hybrides & Natives</li>
-                <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> Architectures Microservices Cloud-Native</li>
-                <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> API REST & GraphQL robustes</li>
-              </ul>
+              
+              <div className="features-list">
+                <div className="feature-row"><i className="fas fa-code"></i> <span>Applications Web Modernes</span></div>
+                <div className="feature-row"><i className="fas fa-mobile-alt"></i> <span>Solutions Mobile</span></div>
+                <div className="feature-row"><i className="fas fa-layer-group"></i> <span>Microservices</span></div>
+                <div className="feature-row"><i className="fas fa-link"></i> <span>API REST & GraphQL</span></div>
+              </div>
             </div>
-            <div style={{ background: 'rgba(255,102,0,0.05)', padding: '40px', borderRadius: '20px', border: '1px solid rgba(255,102,0,0.1)' }}>
-              <h3>Prêt à coder ?</h3>
-              <p>Discutons de vos besoins techniques et trouvons ensemble la meilleure architecture pour votre projet.</p>
-              <Link to="/contact" className="btn-pill" style={{ marginTop: '20px', display: 'inline-block' }}>Démarrer un projet</Link>
+
+            <div className="service-sidebar">
+              <div className="cta-card-premium">
+                <h3>Prêt à coder ?</h3>
+                <p>Confiez-nous vos projets les plus ambitieux. Nous transformons votre vision en code performant.</p>
+                <Link to="/contact" className="btn btn-primary" style={{ width: '100%' }}>LANCER MON PROJET</Link>
+              </div>
             </div>
           </div>
         </div>

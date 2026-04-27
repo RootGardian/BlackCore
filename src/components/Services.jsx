@@ -41,7 +41,7 @@ const Services = () => {
 
       <div className="services-grid">
         {services.map((service, index) => (
-          <Link key={index} to={service.link} className={`service-card ${service.color} reveal`} style={{ textDecoration: 'none' }}>
+          <Link key={index} to={service.link} className={`service-card ${service.color} reveal`}>
             <i className={`fas ${service.icon}`}></i>
             <h3>{service.title}</h3>
             <ul>
@@ -49,8 +49,8 @@ const Services = () => {
                 <li key={i}>{item}</li>
               ))}
             </ul>
-            <div style={{ marginTop: 'auto', paddingTop: '20px', color: service.color === 'orange' ? 'white' : 'var(--primary)', fontWeight: '700', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '5px' }}>
-              EN SAVOIR PLUS <i className="fas fa-arrow-right" style={{ fontSize: '0.7rem' }}></i>
+            <div className="more-link">
+              EN SAVOIR PLUS <i className="fas fa-arrow-right"></i>
             </div>
           </Link>
         ))}

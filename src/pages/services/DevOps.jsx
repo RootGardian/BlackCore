@@ -11,30 +11,33 @@ const DevOps = () => {
       <section className="contact-hero">
         <div className="container">
           <div className="section-title reveal active">
-            <div className="hero-badge">DEVOPS</div>
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '3.5rem', color: 'white' }}>Agilité & Performance Infrastructure</h1>
-            <p style={{ maxWidth: '800px', margin: '20px auto' }}>Optimisez vos cycles de déploiement et garantissez une haute disponibilité pour vos services.</p>
+            <h1 className="gradient-text" style={{ fontFamily: 'var(--font-serif)', fontSize: '4rem', marginBottom: '20px' }}>Agilité & Performance Infra</h1>
+            <p style={{ maxWidth: '800px', margin: '0 auto', opacity: 0.8, fontSize: '1.1rem' }}>Optimisez vos cycles de déploiement et garantissez une haute disponibilité pour vos services.</p>
           </div>
         </div>
       </section>
 
       <section className="service-body">
         <div className="container">
-          <div className="contact-container reveal active service-grid">
-            <div>
+          <div className="service-grid reveal active">
+            <div className="service-main-content">
               <h3>Automatisation Cloud</h3>
               <p>Nous construisons des infrastructures résilientes et automatisées pour vos applications.</p>
-              <ul className="nav-links" style={{ alignItems: 'flex-start', marginTop: '20px', gap: '15px' }}>
-                <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> Pipelines CI/CD (GitHub Actions, GitLab)</li>
-                <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> Infrastructure as Code (Terraform, Ansible)</li>
-                <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> Orchestration Docker & Kubernetes</li>
-                <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> Monitoring & Observabilité Temps Réel</li>
-              </ul>
+              
+              <div className="features-list">
+                <div className="feature-row"><i className="fas fa-infinity"></i> <span>Pipelines CI/CD</span></div>
+                <div className="feature-row"><i className="fas fa-cloud"></i> <span>Infrastructure as Code</span></div>
+                <div className="feature-row"><i className="fas fa-dharmachakra"></i> <span>Kubernetes</span></div>
+                <div className="feature-row"><i className="fas fa-chart-line"></i> <span>Observabilité</span></div>
+              </div>
             </div>
-            <div style={{ background: 'rgba(255,102,0,0.05)', padding: '40px', borderRadius: '20px', border: '1px solid rgba(255,102,0,0.1)' }}>
-              <h3>Stabilisez votre Cloud</h3>
-              <p>Éliminez les frictions entre développement et opérations pour accélérer votre mise sur le marché.</p>
-              <Link to="/contact" className="btn-pill" style={{ marginTop: '20px', display: 'inline-block' }}>Optimiser mon infra</Link>
+
+            <div className="service-sidebar">
+              <div className="cta-card-premium">
+                <h3>Stabilisez votre Cloud</h3>
+                <p>Réduisez les temps d'arrêt et accélérez vos cycles de mise à jour avec une culture DevOps forte.</p>
+                <Link to="/contact" className="btn btn-primary" style={{ width: '100%' }}>OPTIMISER MON INFRA</Link>
+              </div>
             </div>
           </div>
         </div>
