@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blackcore-tech.com/sitemap.xml
+# Sitemap for search engines
+Sitemap: https://blackcore-l8nt.onrender.com/sitemap.xml
